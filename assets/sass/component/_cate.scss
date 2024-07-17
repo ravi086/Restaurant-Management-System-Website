@@ -1,0 +1,241 @@
+/*-------------------------------------------------------
+15. Cate css 
+---------------------------------------------------------*/
+
+.cate-area.cate-4 {
+	padding-bottom: 12rem;
+    margin-bottom: -0rem;
+	&::before {
+		height: 100%;
+	}
+}
+
+.cate-area {
+	overflow: hidden;
+	padding-bottom: 4rem;
+    margin-bottom: -4rem;
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--clr-def);
+		z-index: -1;
+		height: 65%;
+		width: 100%;
+		content: '';
+	}
+	.c-sp-1 {
+		height: 30rem;
+		width: 30rem;
+		position: absolute;
+		top: -56px;
+		right: -56px;
+		border-radius: 50%;
+		background-color: var(--clr-def-2);
+		opacity: .09;
+		animation: sm-bg 5s ease-in-out infinite;
+	}
+	.c-sp-2 {
+		height: 30rem;
+		width: 30rem;
+		position: absolute;
+		bottom: 50%;;
+		left: -56px;
+		border-radius: 50%;
+		background-image: linear-gradient(to right, transparent 0%,var(--clr-def-2) 100%);
+		animation: sm-bg 5s ease-in-out infinite;
+		opacity: .07;
+	}
+}
+
+@keyframes sm-bg {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.cate-box{
+	text-align: center;
+	box-shadow: 0 8px 38px rgba(12,12,12, .09);
+	padding: 2rem;
+	position: relative;
+	z-index: 1;
+	background-color: var(--clr-white);
+	&::before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		height: 97%;
+		width: 95%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1px solid #eee;
+		transition: all .5s ease-in-out;
+	}
+	.cate-pic {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 2.5rem;
+		img {
+			width: 100%;
+		}
+		.cate-number {
+			position: absolute;
+			bottom: 1.5rem;
+			left: 1.5rem;
+			span {
+				height: 4rem;
+				width: 4rem;
+				font-size: 1.8rem;
+				display: block;
+				background-color: var(--clr-def);
+				border-radius: 50%;
+				line-height: 4rem;
+				text-align: center;
+				font-weight: 600;
+				color: var(--clr-white);
+			}
+		}
+	}
+	.cate-content {
+		h4 {
+			text-transform: capitalize;
+			font-size: 2.2rem;
+			margin-bottom: 2rem;
+			line-height: 1;
+		}
+		p {
+			margin-bottom: 2.5rem;
+			line-height: 3.3rem
+		}
+	}
+	&:hover {
+		&::before {
+			border: 1px solid var(--clr-def);
+		}
+	}
+}
+
+// Categories 2
+
+.cate-2-shape {
+	img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		border-radius: 0 0 1rem 0;
+	}
+	.cate-2-num {
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		height: 5rem;
+		width: 5rem;
+		line-height: 5rem;
+		text-align: center;
+		background-color: var(--clr-white);
+		border-radius: 50%;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+}
+
+.cate-2-box {
+	padding: 4rem;
+    border-top: 3px solid var(--clr-def);
+    box-shadow: 0 0 13px #cccccc;
+    background-color: var(--clr-white);
+    border-radius: var(--rad-1);
+	.cate-2-pic {
+		margin-bottom: 3rem;
+		img {
+			border-radius: var(--rad-1);
+		}
+	}
+	.cate-2-desc {
+		h2 {
+			font-size: 3rem;
+			margin-bottom: 2rem;
+		}
+		p {
+			margin-bottom: 4rem;
+		}
+		a {
+			
+		}
+	}
+}
+
+//Cate 2 Slider 
+
+
+.cate-2-area .owl-stage-outer {
+    margin: -15px -15px 0;
+    padding: 15px;
+}
+
+.cate-2-left-pic {
+	display: flex;
+	gap: 5px;
+}
+
+.cate-2-shape {
+	img {
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+
+.cate-2-bottom-shape {
+	img {
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+	}
+}
+
+.cate-sol.owl-theme .owl-nav {
+  margin-top: 0px; }
+
+.cate-sol.owl-theme .owl-nav [class*=owl-] {
+  color: var(--clr-def);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  background: var(--clr-white);
+  display: inline-block;
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 10px rgba(32, 114, 0, 0.8); }
+
+.cate-sol.owl-theme .owl-nav [class*=owl-]:hover {
+  background: var(--clr-def);
+  color: var(--clr-white); }
+
+.cate-sol.owl-theme .owl-nav .owl-prev {
+  left: -8rem; }
+
+.cate-sol.owl-theme .owl-nav .owl-next {
+  right: -8rem; }
+
+.cate-sol.owl-theme .owl-nav .owl-prev,
+.cate-sol.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%); }
+
+

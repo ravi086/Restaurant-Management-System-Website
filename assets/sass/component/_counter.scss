@@ -1,0 +1,117 @@
+/*-------------------------------------------------------
+12. Counter css
+---------------------------------------------------------*/
+
+
+.counter-area {
+	position: relative;
+	z-index: 1;
+	.circle-shape {
+		position: absolute;
+		right: 5rem;
+		top: 5rem;
+	}
+}
+
+.counter-chm {
+	img {
+		position: absolute;
+		z-index: -1;
+		&:first-child {
+			bottom: 0;
+		}
+	}
+}
+
+//.counter-wpr.grid-px-2 {
+//	grid-gap: 10rem;
+//}
+
+.half-circle {
+	height: 50px;
+	width: 25px;
+	border-radius: 150px 0  150px 0 ;
+	background-color: green;
+}
+
+.pd-60 {
+	padding: 6rem;
+}
+
+.counter-1 {
+    border-radius: 5rem;
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		z-index: -1;
+		height: 100px;
+		width: 50px;
+		border-radius: 150px 0  150px 0 ;
+		background-color: var(--clr-white);
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		z-index: -1;
+		height: 100px;
+		width: 50px;
+		border-radius: 150px 0  150px 0 ;
+		background-color: var(--clr-white);
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%) rotate(-180deg);
+	}
+	.fun-fact {
+		text-align: center;
+		border-right: 1px solid #ccc;
+		&:last-child {
+			margin-right: 0;
+			border-right: none;
+			padding-right: 0;
+		}
+		.fun-icon {
+			font-size: 7rem;
+			color: var(--clr-white);
+			margin-bottom: 2.5rem;
+		}
+		.fun-desc {
+			.timer {
+				position: relative;
+				z-index: 1;
+				display: inline-block;
+				padding-right: 3rem;
+				font-size: 5rem;
+				font-weight: 700;
+				line-height: 1;
+				color: var(--clr-white);
+				margin-bottom: 2rem;
+				&::before {
+					position: absolute;
+					z-index: -1;
+					content: attr(data-count);
+					right: 0;
+					top: 0;
+				}
+			}
+			.medium {
+				position: relative;
+				z-index: 1;
+				font-size: 1.6rem;
+				line-height: 2.2rem;
+				font-weight: 500;
+				letter-spacing: 0.0015em;
+				text-transform: capitalize;
+				display: block;
+				color: var(--clr-white);
+			}
+		}
+	}
+}
+
+//Counter 2
+

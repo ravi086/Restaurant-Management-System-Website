@@ -1,0 +1,60 @@
+/*-------------------------------------------------------
+10. Feature css 
+---------------------------------------------------------*/
+
+.feature-wpr.grid-2 {
+    grid-gap: 9rem;
+}
+
+.feature-wpr {
+	border: 2px solid #F3F3F4;
+	padding: 6rem;
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		z-index: -1;
+		height: 80%;
+		background-color: #F3F3F4;
+		width: 2px;
+		content: '';
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&::after {
+		position: absolute;
+		z-index: -1;
+		height: 2px;
+		background-color: #F3F3F4;
+		width: 50%;
+		content: '';
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+.feature-box {
+	display: flex;
+	gap: 4rem;
+	align-items: flex-start;
+	
+	.feature-icon {
+		i {
+			font-size: 7rem;
+			color: var(--clr-def);
+		}
+	}
+	.feature-desc {
+		h4 {
+			font-size: 2.2rem;
+			line-height: 3.4rem;
+			margin-bottom: 2rem;
+			font-weight:  600;
+		}
+		p {
+			
+		}
+	}
+}

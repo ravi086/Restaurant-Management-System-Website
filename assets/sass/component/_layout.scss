@@ -1,0 +1,52 @@
+/*-------------------------------------------------------
+11. Layout css 
+---------------------------------------------------------*/
+
+.layout-single {
+	overflow: hidden;
+}
+
+.layout-area {
+	&::before {
+		position: absolute;
+		content: '';
+		height: 40rem;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: var(--clr-white);
+		z-index: -1;
+		border-radius: 0 0 50% 50%;
+	}
+}
+
+.ly-shape-1 {
+    position: absolute;
+    right: -10%;
+    top: -60%;
+    z-index: -1;
+}
+
+.layout-right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.layout-content {
+		padding: 4rem;
+		h3 {
+			text-transform: capitalize;
+			margin-bottom: 2rem;
+			font-size: 4rem;
+			line-height: 5rem;
+		}
+	}
+}
+
+
+.layout-single {
+    padding: 6rem;
+    background-color: var(--clr-white);
+    border-radius: 3rem;
+    margin-bottom: 3rem;
+	box-shadow: 0 0 29px rgba(0,0,0,.07);
+}

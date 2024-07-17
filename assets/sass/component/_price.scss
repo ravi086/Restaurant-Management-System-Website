@@ -1,0 +1,118 @@
+/*-------------------------------------------------------
+17. Price css
+---------------------------------------------------------*/
+
+.price-tree {
+	position: absolute;
+	bottom: 0;
+	left: 1rem;
+	z-index: -1;
+}
+
+.pricing-wrapper {
+    margin-top: 2.7rem;
+}
+
+.price-box {
+	text-align: center;
+	border: 1px solid #ccc;
+    padding: 6rem 0 5rem 0;
+	position: relative;
+	z-index: 1;
+	background-color: var(--clr-def);
+	box-shadow: 0 0 .9rem rgba(0, 0, 0,.09);
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		width: 214px;
+		height: 185px;
+	}
+}
+
+.price-head {
+	position: relative;
+	z-index: 1;
+}
+
+.price-ribon {
+	font-size: 1.6rem;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 0 .9rem rgba(0, 0, 0,.09);
+    display: inline-block;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    background-color: var(--clr-def);
+    color: var(--clr-white);
+    border-radius: 5px;
+	text-transform: capitalize;
+}
+
+.price-shape {
+	position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.price-head-content {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+	h4 {
+		text-transform: uppercase;
+		margin: 3rem 0;
+	}
+	h6 {
+		margin: 4rem 0 0 0;
+		color: var(--clr-white);
+		font-size: 1.3rem;
+		padding: 1.2rem 3rem;
+		box-shadow: 0 0 .9rem rgba(0, 0, 0,.09);
+		display: inline-block;
+		background-color: var(--clr-def);
+		color: var(--clr-white);
+		border-radius: 5px;
+		text-transform: capitalize;
+	}
+	h3 {
+		height: 20rem;
+		width: 20rem;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 20rem;
+		background-color: var(--clr-def-3);
+		font-size: 4.5rem;
+		font-weight: 500;
+		color: var(--clr-white);
+		box-shadow: 0 0 29px rgba(0,0,0,.07);
+		margin: 0 auto;
+		span {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+
+.price-desc {
+	padding-top: 3rem;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		li {
+			color: var(--clr-white);
+		}
+	}
+}
+
+.price-bottom {
+	line-height: 1;
+	margin-top: 4rem;
+}
+

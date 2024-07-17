@@ -1,0 +1,103 @@
+/*-------------------------------------------------------
+16. Review css 
+---------------------------------------------------------*/
+
+.rev-area {
+	background-color: var(--clr-def);
+}
+
+.rev-pic {
+	img {
+		border-radius: 50%;
+	}
+}
+
+.rev-right {
+	display: flex;
+	align-items: center;
+}
+
+.rev-wpr.grid-px-2 {
+    grid-gap: 5rem;
+}
+
+.rev-content {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    background-color: var(--clr-def-3);
+    padding: 4rem;
+    border-radius: 3rem;
+	.rev-icon {
+		.rev-pc {
+			img {
+				display: inline-block;
+			}
+		}
+	}
+	.rev-desc {
+		blockquote {
+			font-size: 2rem;
+			line-height: 3.3rem;
+			margin-bottom: 3rem;
+			color: var(--clr-white);
+			margin-top: -1rem;
+		}
+		.rev-bio {
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+			.rev-txt {
+				line-height: 1;
+				h4 {
+					font-size: 2rem;
+					text-transform: capitalize;
+					margin-bottom: 1rem;
+					line-height: 1;
+					color: var(--clr-white);
+				}
+				span {
+					font-weight: 500;
+					text-transform: capitalize;
+					font-size: 1.4rem;
+					line-height: 1;
+					color: var(--clr-white);
+				}
+			}
+		}
+	} 
+}
+
+//Owl Carousel
+
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: inherit;
+}
+
+.rev-sldr.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 70px;
+}
+
+.rev-sldr.owl-theme .owl-dots,
+.rev-sldr.owl-theme .owl-nav {
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 20px;
+    height: 5px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	width: 20px;
+    height: 5px;
+    background-color: #37582D;
+}

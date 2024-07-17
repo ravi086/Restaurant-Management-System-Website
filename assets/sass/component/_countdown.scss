@@ -1,0 +1,67 @@
+/*-------------------------------------------------------
+14. Project css 
+---------------------------------------------------------*/
+
+.cd-wpr {
+	position: relative;
+	z-index: 1;
+	padding: 6rem;
+	border-radius: 5rem;
+	&::before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: var(--clr-def);
+		border-radius: 5rem;
+	}
+}
+
+
+//Countdown Plugin
+
+.cd-title {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+    color: var(--clr-white);
+    font-weight: 700;
+    margin-top: -1rem;
+}
+
+.cd-left {
+	display: flex;
+	align-items: center;
+	line-height: 1;
+}
+
+.cd-up {
+	line-height: 1;
+}
+
+.countdown {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: space-between;
+	li {
+		line-height: 1;
+		h2 {
+			color: var(--clr-white);
+			font-weight: 800;
+			font-size: 5rem;
+			font-family: var(--font-1);
+			line-height: 1;
+		}
+		p {
+			margin-bottom: 0;
+			color: var(--clr-white);
+			font-size: 2rem;
+			font-weight: 500;
+			font-family: var(--font-2);
+		}
+	}
+}

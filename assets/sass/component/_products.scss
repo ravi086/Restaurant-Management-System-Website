@@ -1,0 +1,144 @@
+/*-------------------------------------------------------
+12. Products css 
+---------------------------------------------------------*/
+
+.product-tree {
+	img {
+		position: absolute;
+		z-index: -1;
+		&:first-child {
+			bottom: 0;
+			right: 0;
+		}
+		&:nth-child(2) {
+			top: 0;
+			left: 2rem;
+		}
+	}
+}
+
+.products-wpr.grid-4 {
+    row-gap: 4.5rem;
+}
+
+.products-box {
+	text-transform: capitalize;
+	position: relative;
+	z-index: 1;
+	.products-pic {
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		.carts {
+			position: absolute;
+			top: 1.5rem;
+			right: 1.5rem;
+			flex-direction: column;
+			gap: 1.5rem;
+			transform: translateY(-140%);
+			transition: all .5s ease-in-out;
+			li {
+				a {
+					i {
+						height: 3rem;
+						width: 3rem;
+						line-height: 3.2rem;
+						text-align: center;
+						background-color: var(--clr-def);
+						color: var(--clr-white);
+						display: block;
+						font-size: 1.4rem;
+						border-radius: 50%;
+						transition: all .5s ease-in-out;
+						padding-left: 2px;
+						&:hover {
+							background-color: var(--clr-def-2);
+							color: var(--clr-white);
+						}
+					}
+				}
+			}
+		}
+	}
+	.products-desc {
+		border: 1px solid #eee;
+		border-top: none;
+		padding: 3rem 2rem 4.5rem 2rem;
+		h5 {
+			text-transform: capitalize;
+			margin-bottom: 2rem;
+		}
+		p {
+			margin-bottom: 2rem;
+		}
+		.products-price {
+			line-height: 1;
+			span {
+				font-weight: 600;
+				color: var(--clr-def);
+				display: inline-block;
+			}
+		}
+		.add-to-cart {
+			line-height: 1;
+			position: absolute;
+			bottom: -15px;
+			.cart-btn {
+				padding: 7px 1.5rem;
+				line-height: 1;
+				background-color: var(--clr-def);
+				color: var(--clr-white);
+				border-radius: 2rem;
+				display: inline-block;
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+				font-size: 1.6rem;
+				&::before {
+					position: absolute;
+					height: 0%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					background-color: var(--clr-def-2);
+					content: '';
+					z-index: -1;
+					transition: all .5s ease-in-out;
+					border-radius: 2rem 2rem 0 0;
+				}
+				&::after {
+					position: absolute;
+					height: 0%;
+					width: 100%;
+					bottom: 0;
+					left: 0;
+					background-color: var(--clr-def-2);
+					content: '';
+					z-index: -1;
+					transition: all .5s ease-in-out;
+					border-radius: 0 0 2rem 2rem;
+				}
+			}
+		}
+	}
+	&:hover {
+		.carts {
+			transform: translateY(0%);
+		}
+		.add-to-cart {
+			.cart-btn {
+				&::before {
+					height: 50%;
+				}
+				&::after {
+					height: 50%;
+				}
+			}
+		}
+	}
+}
+
+
+.load-more {
+    line-height: 14px;
+}

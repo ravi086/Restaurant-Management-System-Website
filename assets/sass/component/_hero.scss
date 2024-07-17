@@ -1,0 +1,345 @@
+
+/*-------------------------------------------------------
+08. Hero css 
+---------------------------------------------------------*/
+
+@mixin hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	z-index: 1;
+	.hero-shape {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		bottom: 0;
+		img {
+			width: 100%
+		}
+	}
+}
+
+.hero-section {
+	background-position: bottom left;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+//Hero 1 #00008B
+
+.hero-single {
+    @include hero;
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+        .hero-title {
+			margin-bottom: 3rem;
+			line-height: 1.2;
+			font-size: 6rem;
+			text-transform: uppercase;
+			font-weight: 900;
+			color: var(--clr-white);
+        }
+		.hero-sub-title {
+			margin-bottom: 2rem;
+		}
+		
+		p {
+			font-size: 2rem;
+			line-height: 38px;
+			margin-bottom: 4rem;
+			color: var(--clr-white);
+		}
+		
+        .hero-btn {
+            gap: 2rem;
+            line-height: 1;
+            display: flex;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.hero-title {
+	font-size: 40px;
+	line-height: 5rem;
+	margin-bottom: 3rem;
+	font-weight: 900;
+}
+
+.hero-sub-title {
+	font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-1 {
+	img {
+		position: absolute;
+		z-index: -1;
+		&:first-child {
+			left: 5rem;
+			bottom: 10%;
+		}
+		&:nth-child(2) {
+			right: 0;
+			bottom: 0;
+		}
+		&:nth-child(3) {
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.hero-dot {
+	img {
+		position: absolute;
+		z-index: -1;
+		&:first-child {
+			top: 15%;
+			left: 55%;
+			margin-left: -10rem;
+		}
+		&:nth-child(2) {
+			right: 0;
+			top: -7rem;
+		}
+	}
+}
+
+//Play Button
+
+//HTML
+//<div class="pl">
+//<a href="#" class="item popup-youtube play-bt">
+//<i>
+//<img src="assets/img/icons/play-button-1.png" alt="Itsol">
+//</i>
+//</a>
+//</div>
+
+.play-bt {
+    width: 9rem;
+    height: 9rem;
+    line-height: 9rem;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: var(--clr-def);
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	font-size: 4rem;
+	color: var(--clr-white);
+	padding-left: 5px;
+	&:hover {
+		color: var(--clr-white);
+	}
+	&::before {
+		content: '';
+		background-color: var(--clr-def);
+		opacity: .4;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		z-index: 0;
+		pointer-events: none;
+		-webkit-animation: button_wave 3s infinite ease-in-out;
+		animation: button_wave 3s infinite ease-in-out;
+	}
+}
+
+@-webkit-keyframes button_wave{
+  0% {
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+    box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+  }
+  50% {
+    -webkit-box-shadow:none;
+    box-shadow:none;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+    box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+  }
+}
+
+//Hero Slider
+
+.bo {
+	height: 20rem;
+	width: 20rem;
+	clip-path: path("M 102.905 18.268 c 28.412 -37.588 97.208 3.111 97.208 58.371 A 100.057 100.057 0 0 1 0 76.639 C 0 21.379 74.493 55.857 102.905 18.268 Z");
+	background-color: var(--clr-def);
+	display: inline-block;
+}
+
+//Home 2
+
+.hero-2-section {
+	.hero-2-single {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		.hero-2-content {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			.hero-2-desc {
+				.hero-title {
+					font-size: 50px;
+					line-height: 7.1rem;
+				}
+				p {
+					margin-bottom: 3.8rem;
+				}
+				.hero-btn {
+					
+				}
+			}
+		}
+	}
+}
+
+
+.hero-2 {
+	img {
+		position: absolute;
+		z-index: -1;
+	}
+	.sec-pic-1 {
+		bottom: 0;
+		width: 100%;
+	}
+	.sec-pic-2 {
+		top: 0;
+	}
+	.sec-pic-3 {
+		top: 20%;
+		right: 7%;
+	}
+	.sec-pic-4 {
+		bottom: 15%;
+		left: 35%;
+	}
+}
+
+
+//Owl Carousel 
+
+.hero-sldr.owl-theme .owl-nav {
+    margin-top: 0px;
+}
+
+.hero-sldr.owl-theme .owl-nav [class*=owl-] {
+    color:var(--clr-def);
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    background: var(--clr-white);
+    display: inline-block;
+    cursor: pointer;
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 0 0px 10px rgba(32, 114, 0,.8);
+}
+
+.hero-sldr.owl-theme .owl-nav [class*=owl-]:hover {
+    background: var(--clr-def);
+    color: var(--clr-white);
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-prev {
+	left: 5rem;
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-next {
+	right: 5rem;
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-prev,
+.hero-sldr.owl-theme .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+
+.hero-sldr {
+	.owl-item {
+		.hero-2-single {
+			.hero-2-content {
+				h2 {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 500ms ease;
+					transform: translateY(-20px);
+				}
+				p {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 500ms ease;
+					transform: translateX(-50px);
+				}
+				.hero-btn {
+					transform: scaleY(0);
+					transition: all 500ms ease;
+					transition-delay: 2000ms;
+					transform-origin: bottom;
+				}
+			}
+			.hdr-2-pic {
+				opacity: 0;
+				visibility: hidden;
+				transition: all 500ms ease;
+				transform: translateY(50px);
+			}
+		}
+	}
+}
+
+.hero-sldr {
+	.owl-item.active {
+		.hero-2-single {
+			.hero-2-content {
+				h2 {
+					opacity: 1;
+					visibility: visible;
+					transition-delay: 800ms;
+					transform: translateY(0px);
+				}
+				p {
+					opacity: 1;
+					visibility: visible;
+					transition-delay: 1600ms;
+					transform: translateX(0px);
+				}
+				.hero-btn {
+    				transform: scale(1);
+				}
+			}
+			.hdr-2-pic {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 1200ms;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+
+
+
+
+

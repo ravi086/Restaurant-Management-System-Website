@@ -1,0 +1,131 @@
+
+/*-------------------------------------------------------
+16. Contact US css 
+---------------------------------------------------------*/
+
+
+.contact-us-wpr {
+	.g-5, .gx-5 {
+		--bs-gutter-x: 5rem;
+	}	
+}
+
+.contact-form {
+	padding: 4rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 22px rgba(0, 0, 0, .09);
+	.form-control {
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+	}
+	.contact-sub-btn {
+		button {
+			transition: .5s ease-in-out;
+			margin-top: 3rem;
+		}
+	}
+}
+
+textarea.form-control {
+	height: 15rem!important;
+	padding-top: 2rem!important; 
+}
+
+.addr-box-single {
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.09);
+    padding: 4rem 3rem 4rem 4rem;
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		z-index: -1;
+		height: 100%;
+		width: 1rem;
+		background-color: var(--clr-def);
+		left: 0;
+		top: 0;
+		content: '';
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.addr-icon {
+		i {
+			font-size: 3rem;
+			color: var(--clr-white);
+			height: 5rem;
+			width: 5rem;
+			line-height: 5rem;
+			text-align: center;
+			background-color: var(--clr-def);
+			display: inline-block;
+			border-radius: 50%;
+			position: relative;
+			z-index: 1;
+			&::after {
+				position: absolute;
+				z-index: -1;
+				content: '';
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border: 1px solid var(--clr-def);
+				height: 6rem;
+				width: 6rem;
+				z-index: -1;
+				border-radius: 50%;	
+			}
+		}
+	}
+	.addr-desc {
+		line-height: 1;
+		h5 {
+			text-transform: capitalize;
+			margin-bottom: 1rem;
+		}
+		p {
+			line-height: 1.5;
+		}
+	}
+}
+
+.contact-page {
+	flex-direction: column;
+	align-items: flex-start;
+	.contact-table {
+		width: 100%;
+		margin-top: 3rem;
+		.table>:not(caption)>*>* {
+			padding: 2rem 3rem;
+		}
+	}
+}
+
+.contact-bottom {
+	h2 {
+		margin-top: -1rem;
+	}
+}
+
+
+//Google Map
+
+.g-map-area {
+  height: 40rem; 
+}
+
+.g-map--wrapper {
+	iframe {
+	  width: 100%;
+	  height: 40rem; 
+	  border: none; 
+	}
+}
+
+

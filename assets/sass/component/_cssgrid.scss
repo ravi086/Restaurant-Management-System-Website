@@ -1,0 +1,85 @@
+
+/*-------------------------------------------------------
+05. Grids css 
+---------------------------------------------------------*/
+
+.grid-2 {
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(2,1fr);
+}
+
+.grid-3 {
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(3,1fr);
+}
+
+.grid-4 {
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(4,1fr);
+}
+
+.grid-5 {
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(5,1fr);
+}
+
+.grid-6 {
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(6,1fr);
+}
+
+.grid-px-2 {
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+}
+
+.gap-0 {
+	grid-gap: 0;
+}
+
+.cs-gap-1 {
+	grid-gap: 1rem;
+}
+
+.cs-gap-2 {
+	grid-gap: 2rem;
+}
+
+.cs-gap-3 {
+	grid-gap: 3rem;
+}
+
+.cs-gap-4 {
+	grid-gap: 4rem;
+}
+
+.cs-gap-5 {
+	grid-gap: 5rem;
+}
+
+.cs-gap-6 {
+	grid-gap: 6rem;
+}
+
+.cs-gap-7 {
+	grid-gap: 7rem;
+}
+
+.cs-gap-8 {
+	grid-gap: 8rem;
+}
+
+.cs-gap-9 {
+	grid-gap: 9rem;
+}
+
+.cs-gap-10 {
+	grid-gap: 10rem;
+}
+

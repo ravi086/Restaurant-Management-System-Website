@@ -1,0 +1,18 @@
+/*-------------------------------------------------------
+24. Vidz css 
+---------------------------------------------------------*/
+
+.vidz-wpr {
+	position: relative;
+	z-index: 1;
+	img {
+		filter: brightness(.3);
+	}
+	.pl {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
